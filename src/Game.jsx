@@ -81,7 +81,7 @@ function Experience( {visible, status} )
 function Square({x, z, color, onSquareClick}){
     return (
         <mesh position-x={ x } position-y={ -10 } position-z={ z }  scale={ 10 } onClick={onSquareClick}>
-            <boxGeometry />
+            <boxGeometry args={[1, 0.2]}/>
             <meshStandardMaterial 
                 color={color}
             />
@@ -146,15 +146,15 @@ function Board( {xIsNext, squares, onPlay} )
         </Text>
         </Float>
 
-        <Square x='-10' z='0' color={squares[0]} onSquareClick={() => handleClick(0)}/>
-        <Square x='0' z='0' color={squares[1]} onSquareClick={() => handleClick(1)}/>
-        <Square x='10' z='0' color={squares[2]} onSquareClick={() => handleClick(2)}/>
-        <Square x='-10' z='-10' color={squares[3]} onSquareClick={() => handleClick(3)}/>
+        <Square x='-11' z='1' color={squares[0]} onSquareClick={() => handleClick(0)}/>
+        <Square x='0' z='1' color={squares[1]} onSquareClick={() => handleClick(1)}/>
+        <Square x='11' z='1' color={squares[2]} onSquareClick={() => handleClick(2)}/>
+        <Square x='-11' z='-10' color={squares[3]} onSquareClick={() => handleClick(3)}/>
         <Square x='0' z='-10' color={squares[4]} onSquareClick={() => handleClick(4)}/>
-        <Square x='10' z='-10' color={squares[5]} onSquareClick={() => handleClick(5)}/>
-        <Square x='-10' z='-20' color={squares[6]} onSquareClick={() => handleClick(6)}/>
-        <Square x='0' z='-20' color={squares[7]} onSquareClick={() => handleClick(7)}/>
-        <Square x='10' z='-20' color={squares[8]} onSquareClick={() => handleClick(8)}/>
+        <Square x='11' z='-10' color={squares[5]} onSquareClick={() => handleClick(5)}/>
+        <Square x='-11' z='-21' color={squares[6]} onSquareClick={() => handleClick(6)}/>
+        <Square x='0' z='-21' color={squares[7]} onSquareClick={() => handleClick(7)}/>
+        <Square x='11' z='-21' color={squares[8]} onSquareClick={() => handleClick(8)}/>
         
 
         <Experience visible={visible} status={status}/>
