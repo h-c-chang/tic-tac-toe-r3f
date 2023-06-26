@@ -101,7 +101,7 @@ function Board( {xIsNext, squares, onPlay} )
         }
         const nextSquares = squares.slice();
         if (xIsNext) {
-            nextSquares[i] = "lightcora";
+            nextSquares[i] = "lightcoral";
         } else {
             nextSquares[i] = "lightblue";
         }
